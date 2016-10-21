@@ -1,0 +1,11 @@
+body{
+  color: rgba(0,0,0,0.54);
+}
+
+.brand-logo{
+  color: grey;
+}
+.errorBox{
+  margin:0;
+  border:0;
+}

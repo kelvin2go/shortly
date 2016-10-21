@@ -1,0 +1,35 @@
+div.row
+  .card-panel.col.s12
+    table.highlight.bordered
+      thead
+        tr
+          th Original URL
+          th Created
+          th Short URL
+          th Visited
+      tbody
+        -console.log(counts)
+        each item, index in items
+          tr
+            td
+              a(href=item.url)= item.url
+            td= moment(item.createAt).format("YYYY/MM/DD  HH:MM")
+            td
+              a(href=evar("SERVER_URL")+item.code)= evar("SERVER_URL")+item.code
+            if counts[item.code]
+              td
+                =counts[item.code].length
+                a.modal-trigger(href="#modal"+index)
+                  i.material-icons.right insert_chart
+            else
+              td= 0
+                i.material-icons.right insert_chart
+          if counts[item.code]
+            div.modal(id="modal"+index)
+              div.modal-content
+                h4 Visit Analytics #{item.code}
+                -var count=counts[item.code]
+                p Mobile #{_.filter(count, function(o){ return o.data.isMobile;} ).length}
+                  p iPhone #{_.filter(count, function(o){ return o.data.isiPhone;} ).length}
+                  p Android #{_.filter(count, function(o){ return o.data.isAndroid} ).length}
+                p browser #{_.filter(count, function(o){ return o.data.browser !== false; }).length}

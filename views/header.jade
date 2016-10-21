@@ -1,0 +1,13 @@
+nav
+  .nav-wrapper
+    a.brand-logo(href="/") 4FONG
+    ul#nav-mobile.right.hide-one-med-and-down
+      li
+        if profile
+          if profile.image
+            .chip
+              img.img-circle(src=profile.image, width=24, alt=profile.displayName)
+              | #{profile.displayName}
+            // a(href='logout') (logout)
+        else
+          a(href='/login') Login

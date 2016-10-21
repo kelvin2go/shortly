@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  div
+  - console.log(user)
+  div ID: #{user.id}
+  div Avator:
+    img(src=user.image)
+  div Name: #{ user.displayName }

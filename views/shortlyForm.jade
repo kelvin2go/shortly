@@ -1,0 +1,13 @@
+.row.teal.lighten-3.white-text
+  form.col.s12(action="/urls", method="POST")
+    .row
+      h4 Simiplify your links
+    .row
+      .input-field.col.s9
+        input#destURL.validate.white.black-text(type="url", name="url", placeholder="The Original URL Here", required )
+        label(for="destURL", data-error="URL start with http / https ")
+      .input-field.col.s3
+        button.waves-effect.waves-light.btn(type="submit") Shorten
+    .row
+      .input-field.col.s9
+        input#destURL.white.black-text(type="text", name="code", placeholder="Your preferred shorten code or None")

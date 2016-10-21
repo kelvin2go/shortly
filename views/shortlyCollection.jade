@@ -1,0 +1,24 @@
+div.row
+  .card-panel.col.s12
+    table.highlight.bordered
+      thead
+        tr
+          th Original URL
+          th Created
+          th Short URL
+          th Visited
+      tbody.collapsible(data-collapsible="accordion")
+        -console.log(counts)
+        each item, index in items
+          tr.collapsible-header
+            td
+              a(href=item.url)= item.url
+            td= moment(item.createAt).format("YYYY/MM/DD HH:MM")
+            td
+              a(href=evar("SERVER_URL")+item.code)= evar("SERVER_URL")+item.code
+            if counts[item.code]
+              td= counts[item.code].length
+            else
+              td= 0
+          .collapsible-body
+            p hello!

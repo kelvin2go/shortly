@@ -1,0 +1,10 @@
+{
+  "GCLOUD_PROJECT": "publy-140603",
+  "DATA_BACKEND": "datastore",
+  "OAUTH2_CLIENT_ID": "836814902185-343p83ka86qb2ojoqg025d47vfrgsqo7.apps.googleusercontent.com",
+  "OAUTH2_CLIENT_SECRET": "gPwF_04dIArbRFYfrY_GQnV3",
+  "OAUTH2_CALLBACK": "http://127.0.0.1:8080/auth/google/callback",
+  "SESSION_SECRET": "gogopub",
+  "GOOGLE_APPLICATION_CREDENTIALS": "publy-d19796f6a483.json",
+  "SERVER_URL": "http://127.0.0.1:8080/"
+}
